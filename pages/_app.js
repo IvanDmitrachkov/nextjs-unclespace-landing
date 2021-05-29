@@ -3,6 +3,8 @@ import 'styles/global.css'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { Hydrate } from 'react-query/hydration'
 import React from 'react'
+import Header from 'components/Header/Header'
+import Footer from 'components/Footer/Footer'
 
 // eslint-disable-next-line react/prop-types
 function MyApp ({ Component, pageProps }) {
@@ -15,7 +17,9 @@ function MyApp ({ Component, pageProps }) {
     <QueryClientProvider client={queryClientRef.current}>
       {/* eslint-disable-next-line react/prop-types */}
       <Hydrate state={pageProps.dehydratedState}>
+        <Header />
         <Component {...pageProps} />
+        <Footer />
       </Hydrate>
     </QueryClientProvider>
   )
