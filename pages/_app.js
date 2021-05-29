@@ -4,7 +4,8 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { Hydrate } from 'react-query/hydration'
 import React from 'react'
 
-function MyApp({ Component, pageProps }) {
+// eslint-disable-next-line react/prop-types
+function MyApp ({ Component, pageProps }) {
   const queryClientRef = React.useRef()
   if (!queryClientRef.current) {
     queryClientRef.current = new QueryClient()
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <QueryClientProvider client={queryClientRef.current}>
+      {/* eslint-disable-next-line react/prop-types */}
       <Hydrate state={pageProps.dehydratedState}>
         <Component {...pageProps} />
       </Hydrate>

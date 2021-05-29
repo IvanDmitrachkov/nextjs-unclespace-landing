@@ -5,7 +5,7 @@ import { scrollWindowTo } from 'utils/scrollWindowTo'
 import { PAGE_MAIN, PAGE_PRICES } from 'constants/PAGES'
 import { useQuery } from 'react-query'
 import axios from 'axios'
-import Link from 'next/link'
+import Link from 'components/Link/Link'
 
 const scroll = () => {
   const scrollTop = window.scrollY
