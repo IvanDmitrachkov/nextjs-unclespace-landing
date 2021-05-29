@@ -7,7 +7,7 @@ import _ from 'lodash'
 import css from 'pages/prices/pagePrices.module.css'
 import cn from 'classnames'
 
-const Index = () => {
+const PagePrices = () => {
   const { data: banner } = useQuery(
     'banner-home',
     async () => {
@@ -77,4 +77,4 @@ const Index = () => {
     </div>
   )
 }
-export default Index
+export default PagePrices

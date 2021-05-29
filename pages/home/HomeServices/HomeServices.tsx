@@ -7,7 +7,6 @@ import axios from 'axios'
 import { ANCHOR_SERVICES } from 'constants/anchors'
 
 const HomeServices = () => {
-
   const { data: services } = useQuery(
     'home-services',
     async () => {

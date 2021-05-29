@@ -27,9 +27,11 @@ const HomeFacades = () => {
           </li>
         ))}
       </ul>
-      <Link to={PAGE_PRICES} className='flex items-center mt-40 text-24 font-medium'>
+      <Link href={PAGE_PRICES}>
+        <a className='flex items-center mt-40 text-24 font-medium'>
         Показать все цены
         <MdArrowForward className='ml-16 text-48' />
+        </a>
       </Link>
     </div>
   )

@@ -3,7 +3,8 @@ import RouterLink from 'next/link'
 
 interface ILink {
   href?: string | object,
-  children?: React.ReactNode
+  children?: React.ReactNode,
+  className?: string
 }
 
 const Link = ({ href, ...props }: ILink) => {
