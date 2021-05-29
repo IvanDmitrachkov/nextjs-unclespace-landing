@@ -1,31 +1,28 @@
-// packages
-import React from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import { useEmblaCarousel } from 'embla-carousel/react'
 import _ from 'lodash'
 import BgImage from 'components/BgImage/BgImage'
-import { useEffect } from 'react'
 import { MdArrowBack, MdArrowForward } from 'react-icons/md'
-import { useCallback } from 'react'
-import { useState } from 'react'
 
 const emblaOptions = {
   draggable: true
 }
 
-const BigSlider = ({ slides }) => {
+interface IBigSlider {
+  slides: object[]
+}
+
+const BigSlider = ({ slides }: IBigSlider) => {
   const [selectedSlideIndex, setSelectedSlideIndex] = useState(0)
 
-  const [emblaRef, embla] = useEmblaCarousel({
-    ...emblaOptions
-  })
+  const [emblaRef, embla] = useEmblaCarousel(emblaOptions)
 
   // Обновляем слайдер при смене параметров
   useEffect(() => {
     const onSelect = () => {
-      setSelectedSlideIndex(embla.selectedScrollSnap())
+      if (embla) setSelectedSlideIndex(embla.selectedScrollSnap())
     }
     if (embla) {
-
       embla.reInit({
         ...emblaOptions,
         slidesToScroll: 1
@@ -70,4 +67,5 @@ const BigSlider = ({ slides }) => {
     </div>
   )
 }
-export default BigSlider
+
+export default React.memo(BigSlider)

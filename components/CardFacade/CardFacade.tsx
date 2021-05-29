@@ -2,12 +2,19 @@
 import React from 'react'
 import BgImage from 'components/BgImage/BgImage'
 
+interface ICardFacade {
+  title: string,
+  text: string,
+  image: string,
+  price: string
+}
+
 const CardFacade = ({
   title,
   text,
   image,
   price
-}) => {
+}: ICardFacade) => {
   return (
     <div>
       <BgImage className='h-360 sm:h-300' image={image} />
@@ -18,4 +25,5 @@ const CardFacade = ({
     </div>
   )
 }
-export default CardFacade
+
+export default React.memo(CardFacade)
