@@ -1,3 +1,9 @@
-import HomePage from 'pages/home'
+import React from 'react'
 
-export default HomePage
+const index = () => {
+  return (
+    <p>[Your Self Introduction]</p>
+  )
+}
+
+export default index
