@@ -5,7 +5,7 @@ import { Hydrate } from 'react-query/hydration'
 import React from 'react'
 import Header from 'components/Header/Header'
 import Footer from 'components/Footer/Footer'
-// test
+
 // eslint-disable-next-line react/prop-types
 function MyApp ({ Component, pageProps }) {
   const queryClientRef = React.useRef()
