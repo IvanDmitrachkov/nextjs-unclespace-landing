@@ -1,4 +1,6 @@
-export const scrollWindowTo = (id) => {
+
+/** подскрол к элементы по id */
+const scrollWindowTo = (id: string) => {
   if (typeof window === 'undefined' || !id) {
     return null
   }
@@ -19,3 +21,5 @@ export const scrollWindowTo = (id) => {
     window.scrollTo(0, offset)
   }
 }
+
+export default scrollWindowTo
