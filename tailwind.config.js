@@ -25,6 +25,7 @@ module.exports = {
       40: '4rem',
       32: '3.2rem',
       24: '2.4rem',
+      20: '2rem',
       16: '1.6rem',
       8: '.8rem',
       0: '0'
@@ -85,6 +86,7 @@ module.exports = {
       32: '3.2rem',
       42: '4.2rem',
       48: '4.8rem',
+      64: '6.4rem',
       72: '7.2rem'
     },
     screens: {
