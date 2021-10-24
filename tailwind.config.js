@@ -2,6 +2,9 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    borderRadius: {
+      16: '1.6rem'
+    },
     colors: {
       black40a: 'rgba(0, 0, 0, 0.4)',
       grayLight: '#ababab',
@@ -35,7 +38,8 @@ module.exports = {
       screen: '100vw',
       full: '100%',
       '1/3': '33.33%',
-      '2/3': '66.66%'
+      '2/3': '66.66%',
+      '1/4': '25%'
     },
     height: {
       1: '1px',
